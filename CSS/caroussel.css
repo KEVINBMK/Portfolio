@@ -1,0 +1,62 @@
+.carousel {
+  margin-top: 20px; /* ajout d'une marge pour séparer les éléments */
+  width: 50em; /* même largeur que .citation-text */
+  height: 500px; /* hauteur du carrousel */
+  overflow: hidden;
+  margin: 0 auto; /* centrage horizontal */
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s; /* ajout d'une transition pour l'effet de zoom */
+}
+
+.carousel-item img:hover {
+  transform: scale(1.1); /* agrandissement de 10% lorsque le curseur est au-dessus */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* ajout d'une ombre pour donner un effet de profondeur */
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 180%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(30, 88, 197, 0.788);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}

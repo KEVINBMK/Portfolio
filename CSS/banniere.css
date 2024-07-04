@@ -1,0 +1,56 @@
+.banniere{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 26px;
+}
+.text-ban{
+    margin-top: auto;
+    margin-left: auto;
+    text-align: justify;
+    line-height: 1.6;
+    
+}
+.text-ban, 
+.img-ban{
+    transform: translate(-150px,-100px);
+}
+.text-ban {
+    line-height: 1.6; /* Ajuste l'espacement entre les lignes */
+  }
+  
+.txt-ban{
+    display:grid;
+    margin-top: -100%;
+    transform: translate(5px, 40px);
+}
+.img-ban{
+    background-color: var(--navy-200);
+    padding: 2rem;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.img-ban img{
+    width: 250%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-ban img{
+    margin-top: 50%;
+    margin-left: 350%;
+    
+    transition: transform 0.3s; /* ajout d'une transition pour l'effet de zoom */
+    opacity: 0.8; /*transparence*/
+}
+
+.img-ban img:hover {
+    opacity: 1; 
+    transform: scale(1.1); /* agrandissement de 10% lorsque le curseur est au-dessus */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* ajout d'une ombre pour donner un effet de profondeur */
+  }
+
