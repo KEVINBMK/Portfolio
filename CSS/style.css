@@ -4,8 +4,6 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -155,11 +153,14 @@ header {
     transition: width var(--transition-base);
 }
 
+.navbar ul li a:hover {
+    color: var(--color-accent);
+}
+
 .navbar ul li a:hover::after {
     width: 100%;
 }
 
-.navbar ul li a:hover,
 .navbar ul li a span {
     color: var(--color-accent);
 }

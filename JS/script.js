@@ -57,7 +57,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Apply animation to sections
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.team-member, .citation-text, .banner-content');
+    // Use data attribute or specific animation class for better maintainability
+    const sections = document.querySelectorAll('[data-animate-on-scroll], .team-member, .citation-text, .banner-content');
     sections.forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';

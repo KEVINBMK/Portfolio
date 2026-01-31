@@ -6,11 +6,14 @@ const carouselNext = document.querySelector('.carousel-next');
 let currentIndex = 0;
 let autoPlayInterval;
 
+// Configuration
+const AUTO_PLAY_INTERVAL = 4000; // Change slide every 4 seconds
+
 // Auto-play carousel
 function startAutoPlay() {
     autoPlayInterval = setInterval(() => {
         nextSlide();
-    }, 4000); // Change slide every 4 seconds
+    }, AUTO_PLAY_INTERVAL);
 }
 
 function stopAutoPlay() {
