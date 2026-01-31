@@ -1,26 +1,31 @@
 footer {
-    background-image: url('../Image/pexels-shvets-production-9742876.jpg');
+    background: linear-gradient(135deg, rgba(11, 21, 37, 0.95), rgba(37, 99, 235, 0.9)),
+                url('../Image/pexels-shvets-production-9742876.jpg');
     background-size: cover;
     background-position: center;
-    padding: 40px;
+    padding: var(--spacing-xl) var(--spacing-md);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--color-light);
     flex-direction: column;
-  }
-  
-  footer p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  footer a {
-    color: #fff;
+    gap: var(--spacing-sm);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+}
+
+footer a {
+    color: var(--color-light);
     text-decoration: none;
-    margin-bottom: 10px;
-  }
-  
-  footer a:hover {
+    transition: all var(--transition-base);
+    padding: 0 var(--spacing-xs);
+}
+
+footer a:hover {
+    color: var(--color-accent);
     text-decoration: underline;
-  }
+}

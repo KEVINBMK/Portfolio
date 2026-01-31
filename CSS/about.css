@@ -58,46 +58,68 @@ nav ul li a:hover {
     color: #007bff;
 }
 
+/* About Page Styles */
+
 main {
-    padding: 20px;
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--color-gray-light);
+    min-height: 70vh;
 }
 
 #about {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    background-color: var(--color-light);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 0.8s ease-out;
 }
 
 #about h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-dark);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+#about h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    border-radius: 2px;
 }
 
 #about p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray);
 }
 
 #about h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    color: #ccc;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

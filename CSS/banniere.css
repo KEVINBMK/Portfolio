@@ -1,56 +1,80 @@
-.banniere{
+.banniere {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-lg);
 }
-.text-ban{
-    margin-top: auto;
-    margin-left: auto;
-    text-align: justify;
-    line-height: 1.6;
-    
-}
-.text-ban, 
-.img-ban{
-    transform: translate(-150px,-100px);
-}
+
 .text-ban {
-    line-height: 1.6; /* Ajuste l'espacement entre les lignes */
-  }
-  
-.txt-ban{
-    display:grid;
-    margin-top: -100%;
-    transform: translate(5px, 40px);
-}
-.img-ban{
-    background-color: var(--navy-200);
-    padding: 2rem;
-    width: 250px;
+    text-align: left;
+    line-height: 1.8;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    animation: fadeInLeft 1s ease-out 0.6s backwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-ban p {
+    color: var(--color-light);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.txt-ban {
+    margin-top: var(--spacing-md);
+}
+
+.img-ban {
+    display: flex;
     align-items: center;
-    
+    justify-content: center;
+    animation: fadeInRight 1s ease-out 0.6s backwards;
 }
 
-.img-ban img{
-    width: 250%;
-    height: 250px;
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.img-ban img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
-    border-radius: 10px;
-}
-
-.img-ban img{
-    margin-top: 50%;
-    margin-left: 350%;
-    
-    transition: transform 0.3s; /* ajout d'une transition pour l'effet de zoom */
-    opacity: 0.8; /*transparence*/
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    transition: transform var(--transition-base);
 }
 
 .img-ban img:hover {
-    opacity: 1; 
-    transform: scale(1.1); /* agrandissement de 10% lorsque le curseur est au-dessus */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* ajout d'une ombre pour donner un effet de profondeur */
-  }
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
 
+@media (max-width: 768px) {
+    .banniere {
+        grid-template-columns: 1fr;
+    }
+    
+    .img-ban img {
+        max-width: 100%;
+    }
+}
